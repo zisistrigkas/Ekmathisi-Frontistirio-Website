@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ΕΚΜΑΘΗΣΗ - Φροντιστήριο Μέσης Εκπαίδευσης</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Inter:wght@300;400;500;600;700;900&display=swap');
+        
+        .font-serif-custom {
+            font-family: 'GFS Didot', serif;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b-4 border-orange-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="logo.png" alt="ΕΚΜΑΘΗΣΗ Logo" class="h-12 w-auto object-contain transform group-hover:scale-105 transition-transform duration-300">
+                
+                <div>
+                    <span class="text-2xl font-black text-blue-900 block leading-none">ΕΚΜΑΘΗΣΗ</span>
+                    <span class="text-[10px] sm:text-xs text-orange-500 uppercase tracking-[0.2em] font-extrabold">Φροντιστηριο Μεσης Εκπαιδευσης</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex gap-6 lg:gap-8 text-sm font-bold text-slate-600">
+                <a href="#about" class="hover:text-orange-500 transition-colors">Σχετικά</a>
+                <a href="#levels" class="hover:text-blue-600 transition-colors">Βαθμίδες</a>
+                <a href="#panhellenic" class="hover:text-orange-500 transition-colors">Πανελλήνιες</a>
+                <a href="#reviews" class="hover:text-blue-600 transition-colors">Κριτικές</a>
+                <a href="#contact" class="hover:text-orange-500 transition-colors">Επικοινωνία</a>
+            </nav>
+
+            <a href="#contact" class="hidden sm:inline-flex bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold px-7 py-3 rounded-full transition-all shadow-[0_4px_14px_0_rgba(249,115,22,0.39)] hover:shadow-[0_6px_20px_rgba(249,115,22,0.23)] hover:-translate-y-1">
+                Δωρεάν Δοκιμαστικό
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-blue-900 text-white py-24 lg:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_#fff_2px,_transparent_2px)] [background-size:30px_30px]"></div>
+        <div class="absolute top-10 left-10 w-32 h-32 bg-blue-600 rounded-full mix-blend-multiply filter blur-2xl opacity-40 animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 bg-orange-500 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-pulse delay-1000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block bg-white/10 backdrop-blur-sm text-orange-200 text-sm font-bold px-5 py-2 rounded-full shadow-sm mb-6 uppercase tracking-widest border border-white/20">
+                        🚀 Στοχευουμε ψηλα!
+                    </span>
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 drop-shadow-lg">
+                        Η επιτυχία σου ξεκινάει από <span class="text-orange-400">εδώ.</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-blue-100 mb-10 font-medium leading-relaxed drop-shadow">
+                        Ολοκληρωμένη φροντιστηριακή υποστήριξη για μαθητές Γυμνασίου και Λυκείου. Μαθηματικά, Φυσικές Επιστήμες, Ανθρωπιστικές Σπουδές και Πληροφορική με τον πιο σύγχρονο τρόπο!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5">
+                        <a href="#contact" class="bg-orange-500 hover:bg-orange-400 text-white text-center font-black text-lg px-8 py-4 rounded-full transition-all shadow-[0_0_20px_rgba(249,115,22,0.4)] transform hover:scale-105">
+                            Εγγραφές & Ενημέρωση
+                        </a>
+                        <a href="#panhellenic" class="bg-white/10 hover:bg-white/20 text-white text-center font-bold text-lg px-8 py-4 rounded-full transition-all backdrop-blur-md border-2 border-white/40 hover:border-white/80">
+                            Υλικό Πανελληνίων
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex justify-center relative">
+                    <div class="absolute inset-0 bg-gradient-to-t from-orange-500/50 to-transparent rounded-[3rem] transform rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Μαθητής διαβάζει" class="rounded-[3rem] shadow-2xl border-8 border-white w-full max-w-lg transform -rotate-2 hover:rotate-0 transition-transform duration-500 relative z-10 object-cover h-[500px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-white text-slate-800 py-12 relative -mt-6 z-20 mx-4 sm:mx-10 rounded-3xl shadow-xl border-4 border-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x-2 divide-slate-100">
+            <div>
+                <p class="text-5xl font-black text-blue-900">100%</p>
+                <p class="text-sm text-orange-500 mt-2 font-bold uppercase tracking-wide">Επιτυχια</p>
+            </div>
+            <div>
+                <p class="text-5xl font-black text-blue-900">Πολυετής</p>
+                <p class="text-sm text-orange-500 mt-2 font-bold uppercase tracking-wide">Εμπειρία</p>
+            </div>
+            <div>
+                <p class="text-5xl font-black text-blue-900">6</p>
+                <p class="text-sm text-orange-500 mt-2 font-bold uppercase tracking-wide">Μαθητες / Τμημα</p>
+            </div>
+            <div>
+                <p class="text-5xl font-black text-blue-900">Όλα</p>
+                <p class="text-sm text-orange-500 mt-2 font-bold uppercase tracking-wide">Τα Μαθηματα</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+   <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-black text-white bg-orange-500 px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
+            Ποιοι Ειμαστε
+        </span>
+        <h2 class="text-4xl md:text-5xl font-black text-blue-900 mt-4">Η Φιλοσοφία & Το Όραμά Μας</h2>
+        <p class="text-slate-500 mt-4 text-lg font-medium">Ένας χώρος γνώσης, εμπιστοσύνης και εξέλιξης, όπου κάθε παιδί έχει τη σημασία και την προσοχή που του αξίζει.</p>
+    </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-stretch mb-12">
+            <!-- How it started -->
+            <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-lg border-4 border-slate-100 flex flex-col justify-between">
+                <div>
+                    <div class="w-14 h-14 bg-orange-100 text-orange-500 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-3xl font-black text-slate-800 mb-4">Πώς ξεκίνησε η Εκμάθηση</h3>
+                    <p class="text-slate-600 leading-relaxed font-medium mb-4">
+                        Η Εκμάθηση δημιουργήθηκε από τη <strong>Ζωή Τσατσάκη</strong>, φιλόλογο με πολυετή εμπειρία στην εκπαίδευση, με την επιθυμία να δημιουργήσει έναν χώρο όπου κάθε μαθητής θα αντιμετωπίζεται ουσιαστικά και ξεχωριστά.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed font-medium mb-4">
+                        Η καθημερινή επαφή με παιδιά διαφορετικών ηλικιών, χαρακτήρων και αναγκών ανέδειξε μια βασική αλήθεια: <em>κανένα παιδί δεν μαθαίνει με τον ίδιο τρόπο</em>. Άλλο χρειάζεται περισσότερη καθοδήγηση, άλλο έναν διαφορετικό τρόπο εξήγησης, άλλο καλύτερη οργάνωση και άλλο περισσότερη ενθάρρυνση για να πιστέψει στις δυνατότητές του.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed font-medium">
+                        Από αυτή τη φιλοσοφία γεννήθηκε η Εκμάθηση. Σημαντικό ρόλο στη διαμόρφωση της ταυτότητας του φροντιστηρίου έχουν και οι εκπαιδευτικοί της ομάδας μας, οι οποίοι μοιράζονται το ίδιο ενδιαφέρον για το παιδί και την ίδια αντίληψη για μια εκπαίδευση με συνέπεια, ποιότητα και προσωπική προσέγγιση.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Our Vision -->
+            <div class="bg-blue-900 text-white p-8 md:p-10 rounded-[2.5rem] shadow-xl flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-blue-800/50 rounded-full blur-2xl"></div>
+                <div class="relative z-10">
+                    <div class="w-14 h-14 bg-white/10 text-orange-400 rounded-2xl flex items-center justify-center text-2xl mb-6 font-bold backdrop-blur-sm border border-white/10">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h3 class="text-3xl font-black text-white mb-4">Το Όραμά Μας</h3>
+                    <p class="text-blue-100 leading-relaxed font-medium mb-4">
+                        Θέλουμε η Εκμάθηση να είναι ένας χώρος στον οποίο κάθε παιδί αισθάνεται ασφάλεια, εμπιστοσύνη και στήριξη. Για εμάς, εκπαίδευση δεν σημαίνει μόνο κάλυψη της ύλης και καλύτερους βαθμούς. Σημαίνει ουσιαστική κατανόηση, κάλυψη κενών, σωστή οργάνωση της μελέτης και σταδιακή ανάπτυξη αυτοπεποίθησης και αυτονομίας.
+                    </p>
+                    <p class="text-blue-100 leading-relaxed font-medium">
+                        Στόχος μας είναι ο μαθητής να μπορεί να ρωτήσει, να κάνει λάθος, να προσπαθήσει ξανά και να προχωρήσει χωρίς τον φόβο ότι «δεν μπορεί».
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Feature Pillars -->
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h4 class="text-xl font-black text-slate-800 mb-3">Ολιγομελή Τμήματα</h4>
+                <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                    Επιλέγουμε ολιγομελή τμήματα για να παρακολουθούμε στενά την πορεία κάθε μαθητή, να εντοπίζουμε εγκαίρως τις δυσκολίες και να προσαρμόζουμε τη διδασκαλία στον ρυθμό του.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-orange-50 text-orange-500 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-people-roof"></i>
+                </div>
+                <h4 class="text-xl font-black text-slate-800 mb-3">Δίπλα στην Οικογένεια</h4>
+                <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                    Θεωρούμε απαραίτητη τη συνεργασία με τους γονείς. Όταν μαθητής, εκπαιδευτικός και οικογένεια λειτουργούν ως ομάδα, δημιουργούνται οι καλύτερες προϋποθέσεις εξέλιξης.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border-2 border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 bg-blue-50 text-blue-900 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <h4 class="text-xl font-black text-slate-800 mb-3">Επιτυχία / Εξέλιξη</h4>
+                <p class="text-slate-600 text-sm leading-relaxed font-medium">
+                    Η επιτυχία δεν σταματά σε έναν βαθμό. Είναι να βλέπουμε ένα παιδί να αποκτά αυτοπεποίθηση, να οργανώνεται και να ανακαλύπτει ότι μπορεί να πετύχει περισσότερα.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+<!-- Gallery / Space Section -->
+<section id="space" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-black text-white bg-orange-500 px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
+            Ο Χωρος Μας
+        </span>
+        <h2 class="text-4xl md:text-5xl font-black text-blue-900 mt-4">Περιήγηση στο Φροντιστήριο</h2>
+        <p class="text-slate-500 mt-4 text-lg font-medium">
+            Σύγχρονες, φωτεινές και ευχάριστες αίθουσες διδασκαλίας, διαμορφωμένες με φροντίδα για την άνετη και αποτελεσματική μελέτη των μαθητών μας.
+        </p>
+    </div>
+
+    <!-- Photo Grid Container -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1. Είσοδος (Πορτοκαλί Badge) -->
+        <div class="group relative h-72 rounded-[2rem] overflow-hidden shadow-lg border-4 border-slate-100 bg-slate-200 cursor-pointer">
+            <!-- Βάλε το src σου εδώ όταν έχεις τις εικόνες -->
+            <!-- <img src="URL" alt="Είσοδος" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"> -->
+            <div class="absolute bottom-5 left-6">
+                <span class="text-xs font-bold bg-orange-500 text-white px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    Είσοδος
+                </span>
+            </div>
+        </div>
+
+        <!-- 2. Είσοδος (Μπλε Badge) -->
+        <div class="group relative h-72 rounded-[2rem] overflow-hidden shadow-lg border-4 border-slate-100 bg-slate-200 cursor-pointer">
+            <div class="absolute bottom-5 left-6">
+                <span class="text-xs font-bold bg-blue-600 text-white px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    Είσοδος
+                </span>
+            </div>
+        </div>
+
+        <!-- 3. Υποδοχή (Πορτοκαλί Badge) -->
+        <div class="group relative h-72 rounded-[2rem] overflow-hidden shadow-lg border-4 border-slate-100 bg-slate-200 cursor-pointer">
+            <div class="absolute bottom-5 left-6">
+                <span class="text-xs font-bold bg-orange-500 text-white px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    Υποδοχή
+                </span>
+            </div>
+        </div>
+
+        <!-- 4. Υποδοχή (Μπλε Badge) -->
+        <div class="group relative h-72 rounded-[2rem] overflow-hidden shadow-lg border-4 border-slate-100 bg-slate-200 cursor-pointer">
+            <div class="absolute bottom-5 left-6">
+                <span class="text-xs font-bold bg-blue-600 text-white px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    Υποδοχή
+                </span>
+            </div>
+        </div>
+
+        <!-- 5. Αίθουσες (Πορτοκαλί Badge) -->
+        <div class="group relative h-72 rounded-[2rem] overflow-hidden shadow-lg border-4 border-slate-100 bg-slate-200 cursor-pointer">
+            <div class="absolute bottom-5 left-6">
+                <span class="text-xs font-bold bg-orange-500 text-white px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    Αίθουσες
+                </span>
+            </div>
+        </div>
+
+        <!-- 6. Αίθουσες (Μπλε Badge) -->
+        <div class="group relative h-72 rounded-[2rem] overflow-hidden shadow-lg border-4 border-slate-100 bg-slate-200 cursor-pointer">
+            <div class="absolute bottom-5 left-6">
+                <span class="text-xs font-bold bg-blue-600 text-white px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    Αίθουσες
+                </span>
+            </div>
+        </div>
+
+        <!-- 7. Αίθουσες (Πορτοκαλί Badge) -->
+        <div class="group relative h-72 rounded-[2rem] overflow-hidden shadow-lg border-4 border-slate-100 bg-slate-200 cursor-pointer">
+            <div class="absolute bottom-5 left-6">
+                <span class="text-xs font-bold bg-orange-500 text-white px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    Αίθουσες
+                </span>
+            </div>
+        </div>
+
+        <!-- 8. Αίθουσες (Μπλε Badge) -->
+        <div class="group relative h-72 rounded-[2rem] overflow-hidden shadow-lg border-4 border-slate-100 bg-slate-200 cursor-pointer">
+            <div class="absolute bottom-5 left-6">
+                <span class="text-xs font-bold bg-blue-600 text-white px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    Αίθουσες
+                </span>
+            </div>
+        </div>
+
+        <!-- 9. Αίθουσες (Πορτοκαλί Badge) -->
+        <div class="group relative h-72 rounded-[2rem] overflow-hidden shadow-lg border-4 border-slate-100 bg-slate-200 cursor-pointer">
+            <div class="absolute bottom-5 left-6">
+                <span class="text-xs font-bold bg-orange-500 text-white px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                    Αίθουσες
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Levels / Program Section -->
+<section id="levels" class="py-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-black text-white bg-orange-500 px-4 py-1.5 rounded-full uppercase tracking-widest shadow-sm">
+            Προγράμματα Σπουδών
+        </span>
+        <h2 class="text-4xl md:text-5xl font-black text-blue-900 mt-4">Εκπαιδευτικές Βαθμίδες</h2>
+        <p class="text-slate-500 mt-4 text-lg font-medium">
+            Εξειδικευμένα προγράμματα σπουδών με ολιγομελή τμήματα, συστηματική καθοδήγηση και πλήρη κάλυψη της ύλης.
+        </p>
+    </div>
+
+    <!-- Container για όλες τις κάρτες -->
+    <div class="space-y-8">
+        
+        <!-- Πρώτη Σειρά: 3 Κάρτες (Δημοτικό, Πρότυπα, Γυμνάσιο) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 1. Μελέτη & Υποστήριξη Δημοτικού -->
+            <div class="bg-white rounded-[2.5rem] shadow-lg border-4 border-blue-100 hover:border-blue-400 hover:-translate-y-2 transition-all duration-300 group overflow-hidden flex flex-col justify-between h-full">
+                <div>
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Μελέτη Δημοτικού" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-blue-900 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">Δημοτικό</span>
+                        <div class="absolute bottom-3 left-6 w-10 h-10 bg-blue-900 text-white rounded-xl flex items-center justify-center text-lg shadow-lg">
+                            <i class="fa-solid fa-child-reaching"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-slate-800 mb-2">Μελέτη Δημοτικού</h3>
+                        <p class="text-slate-500 text-xs mb-4 font-medium leading-relaxed">
+                            Καθημερινή υποστήριξη στην προετοιμασία των σχολικών μαθημάτων και των εργασιών.
+                        </p>
+
+                        <div class="space-y-2 text-xs font-bold text-slate-700 border-t pt-4">
+                            <div class="flex items-center gap-2.5 bg-blue-50/60 p-2.5 rounded-xl">
+                                <i class="fa-solid fa-circle-check text-blue-600"></i>
+                                <span>Κατανόηση & όχι αποστήθιση</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 bg-blue-50/60 p-2.5 rounded-xl">
+                                <i class="fa-solid fa-circle-check text-blue-600"></i>
+                                <span>Κάλυψη μαθησιακών κενών</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 bg-blue-50/60 p-2.5 rounded-xl">
+                                <i class="fa-solid fa-circle-check text-blue-600"></i>
+                                <span>Σωστή οργάνωση μελέτης</span>
+                            </div>
+                            <div class="flex items-center gap-2.5 bg-blue-50/60 p-2.5 rounded-xl">
+                                <i class="fa-solid fa-circle-check text-blue-600"></i>
+                                <span>Ανάπτυξη αυτονομίας</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2">
+                    <span class="block text-center text-[11px] font-bold text-slate-400 bg-slate-50 py-2 rounded-xl">
+                        Σωστός & Αποτελεσματικός Τρόπος
+                    </span>
+                </div>
+            </div>
+
+            <!-- 2. Πρότυπα Γυμνάσια -->
+            <div class="bg-white rounded-[2.5rem] shadow-lg border-4 border-orange-400 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group overflow-hidden flex flex-col justify-between h-full">
+                <div>
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Πρότυπα Γυμνάσια" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+                        <span class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">ΣΤ' Δημοτικού</span>
+                        <div class="absolute bottom-3 left-6 w-10 h-10 bg-orange-500 text-white rounded-xl flex items-center justify-center text-lg shadow-lg">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-slate-800 mb-2">Πρότυπα Γυμνάσια</h3>
+                        <p class="text-slate-500 text-xs mb-6 font-medium leading-relaxed">
+                            Στοχευμένη προετοιμασία, εξάσκηση σε κριτική σκέψη και προσομοιώσεις εξετάσεων.
+                        </p>
+                        
+                        <div class="space-y-3 text-xs font-bold text-slate-700 border-t pt-4">
+                            <div class="flex justify-between items-center bg-orange-50 p-2.5 rounded-xl text-orange-900">
+                                <span><i class="fa-solid fa-calculator text-orange-600 mr-1.5"></i> Μαθηματικά</span>
+                                <span class="bg-white px-2 py-0.5 rounded-md text-orange-600 shadow-sm">2 ώρες/εβδ</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-orange-50 p-2.5 rounded-xl text-orange-900">
+                                <span><i class="fa-solid fa-book-open text-orange-600 mr-1.5"></i> Νέα Ελληνικά</span>
+                                <span class="bg-white px-2 py-0.5 rounded-md text-orange-600 shadow-sm">2 ώρες/εβδ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2">
+                    <span class="block text-center text-[11px] font-bold text-slate-400 bg-slate-50 py-2 rounded-xl">
+                        Κατανόηση Κειμένου & Λογική Σκέψη
+                    </span>
+                </div>
+            </div>
+
+            <!-- 3. Γυμνάσιο -->
+            <div class="bg-white rounded-[2.5rem] shadow-lg border-4 border-blue-100 hover:border-blue-400 hover:-translate-y-2 transition-all duration-300 group overflow-hidden flex flex-col justify-between h-full">
+                <div>
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Γυμνάσιο" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+                        <div class="absolute bottom-3 left-6 w-10 h-10 bg-blue-900 text-white rounded-xl flex items-center justify-center text-lg shadow-lg">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-slate-800 mb-2">Γυμνάσιο</h3>
+                        <p class="text-slate-500 text-xs mb-4 font-medium leading-relaxed">
+                            Χτίσιμο βάσεων, οργάνωση μελέτης και ομαλή μετάβαση από το Δημοτικό στο Λύκειο.
+                        </p>
+                        
+                        <div class="space-y-2 text-xs">
+                            <details class="bg-blue-50/60 rounded-xl p-2.5 cursor-pointer">
+                                <summary class="font-bold text-blue-900 flex justify-between items-center">
+                                    <span>Α' Γυμνασίου</span>
+                                    <span class="text-[10px] text-blue-600 font-extrabold bg-blue-100 px-2 py-0.5 rounded-md">6 ώρες/εβδ</span>
+                                </summary>
+                                <ul class="mt-2 space-y-1 text-[11px] text-slate-600 border-t border-blue-100 pt-2 pl-1 font-medium">
+                                    <li>• Μαθηματικά: 2 ώρ. | Φυσική: 1 ώρα</li>
+                                    <li>• Νέα Ελλ.: 1.5 ώρα | Αρχαία: 1.5 ώρα</li>
+                                </ul>
+                            </details>
+
+                            <details class="bg-blue-50/60 rounded-xl p-2.5 cursor-pointer">
+                                <summary class="font-bold text-blue-900 flex justify-between items-center">
+                                    <span>Β' Γυμνασίου</span>
+                                    <span class="text-[10px] text-blue-600 font-extrabold bg-blue-100 px-2 py-0.5 rounded-md">7 ώρες/εβδ</span>
+                                </summary>
+                                <ul class="mt-2 space-y-1 text-[11px] text-slate-600 border-t border-blue-100 pt-2 pl-1 font-medium">
+                                    <li>• Μαθηματικά: 2 ώρ. | Φυσική/Χημεία: 2 ώρ.</li>
+                                    <li>• Νέα Ελλ.: 1.5 ώρα | Αρχαία: 1.5 ώρα</li>
+                                </ul>
+                            </details>
+
+                            <details class="bg-blue-50/60 rounded-xl p-2.5 cursor-pointer">
+                                <summary class="font-bold text-blue-900 flex justify-between items-center">
+                                    <span>Γ' Γυμνασίου</span>
+                                    <span class="text-[10px] text-blue-600 font-extrabold bg-blue-100 px-2 py-0.5 rounded-md">8.5 ώρες/εβδ</span>
+                                </summary>
+                                <ul class="mt-2 space-y-1 text-[11px] text-slate-600 border-t border-blue-100 pt-2 pl-1 font-medium">
+                                    <li>• Μαθηματικά: 2.5 ώρ. | Φυσ./Χημ.: 2.5 ώρ.</li>
+                                    <li>• Νέα Ελλ.: 1.5 ώρα | Αρχαία: 1.5 ώρα</li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <span class="block text-center text-[11px] font-bold text-slate-400 bg-slate-50 py-2 rounded-xl">
+                        Ολιγομελή & Ομοιογενή Τμήματα
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Δεύτες Σειρά: 2 Κάρτες (Γενικό Λύκειο, ΕΠΑ.Λ.) - ΙΣΟΜΕΓΕΘΕΙΣ & ΚΕΝΤΡΑΡΙΣΜΕΝΕΣ -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            
+            <!-- 4. Γενικό Λύκειο (ΓΕΛ) -->
+            <div class="bg-white rounded-[2.5rem] shadow-lg border-4 border-blue-100 hover:border-blue-400 hover:-translate-y-2 transition-all duration-300 group overflow-hidden flex flex-col justify-between h-full">
+                <div>
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Λύκειο ΓΕΛ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+                        <div class="absolute bottom-3 left-6 w-10 h-10 bg-blue-900 text-white rounded-xl flex items-center justify-center text-lg shadow-lg">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-slate-800 mb-2">Γενικό Λύκειο</h3>
+                        <p class="text-slate-500 text-xs mb-4 font-medium leading-relaxed">
+                            Προετοιμασία Πανελλαδικών για όλες τις Ομάδες Προσανατολισμού & 3ωρα Διαγωνίσματα.
+                        </p>
+
+                        <div class="space-y-2 text-xs">
+                            <details class="bg-blue-50/60 rounded-xl p-2.5 cursor-pointer">
+                                <summary class="font-bold text-blue-900 flex justify-between items-center">
+                                    <span>Α' Λυκείου</span>
+                                    <span class="text-[10px] text-blue-600 font-extrabold bg-blue-100 px-2 py-0.5 rounded-md">10 ώρες/εβδ</span>
+                                </summary>
+                                <p class="mt-2 text-[11px] text-slate-600 border-t border-blue-100 pt-2 font-medium">
+                                    Άλγεβρα (2.5), Γεωμετρία (1.5), Φυσική (1.5), Χημεία (1), Νέα Ελλ. (1.5), Αρχαία (2).
+                                </p>
+                            </details>
+
+                            <details class="bg-blue-50/60 rounded-xl p-2.5 cursor-pointer">
+                                <summary class="font-bold text-blue-900 flex justify-between items-center">
+                                    <span>Β' Λυκείου (Πεδία)</span>
+                                    <span class="text-[10px] text-blue-600 font-extrabold bg-blue-100 px-2 py-0.5 rounded-md">10-12 ώρες/εβδ</span>
+                                </summary>
+                                <ul class="mt-2 space-y-1 text-[11px] text-slate-600 border-t border-blue-100 pt-2 pl-1 font-medium">
+                                    <li>• 1ο Ανθρωπιστικό: 10 ώρες</li>
+                                    <li>• 2ο Θετικό: 12 ώρες</li>
+                                    <li>• 3ο Υγείας: 10 ώρες</li>
+                                    <li>• 4ο Οικονομίας/Πληρ.: 10 ώρες</li>
+                                </ul>
+                            </details>
+
+                            <details class="bg-blue-50/60 rounded-xl p-2.5 cursor-pointer">
+                                <summary class="font-bold text-blue-900 flex justify-between items-center">
+                                    <span>Γ' Λυκείου (Πανελλαδικές)</span>
+                                    <span class="text-[10px] text-blue-600 font-extrabold bg-blue-100 px-2 py-0.5 rounded-md">13-15 ώρες/εβδ</span>
+                                </summary>
+                                <ul class="mt-2 space-y-1 text-[11px] text-slate-600 border-t border-blue-100 pt-2 pl-1 font-medium">
+                                    <li>• 1ο Ανθρωπιστικό: 13 ώρες</li>
+                                    <li>• 2ο Θετικό: 15 ώρες</li>
+                                    <li>• 3ο Υγείας / 4ο Οικονομίας: 13 ώρες</li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2">
+                    <span class="block text-center text-[11px] font-bold text-slate-400 bg-slate-50 py-2 rounded-xl">
+                        3ωρα Προσομοιωτικά Διαγωνίσματα
+                    </span>
+                </div>
+            </div>
+
+            <!-- 5. ΕΠΑ.Λ. -->
+            <div class="bg-white rounded-[2.5rem] shadow-lg border-4 border-blue-100 hover:border-blue-400 hover:-translate-y-2 transition-all duration-300 group overflow-hidden flex flex-col justify-between h-full">
+                <div>
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ΕΠΑΛ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
+                        <div class="absolute bottom-3 left-6 w-10 h-10 bg-blue-900 text-white rounded-xl flex items-center justify-center text-lg shadow-lg">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-slate-800 mb-2">ΕΠΑ.Λ.</h3>
+                        <p class="text-slate-500 text-xs mb-6 font-medium leading-relaxed">
+                            Εξειδίκευση στα μαθήματα Γενικής Παιδείας και στα μαθήματα Ειδικότητας.
+                        </p>
+
+                        <div class="space-y-3 text-xs font-bold text-slate-700 border-t pt-4">
+                            <div class="flex items-center gap-3 bg-blue-50/60 p-2.5 rounded-xl">
+                                <span class="bg-blue-100 text-blue-700 p-1.5 rounded-lg"><i class="fa-solid fa-calculator text-xs"></i></span>
+                                <span>Μαθηματικά (Άλγεβρα)</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-blue-50/60 p-2.5 rounded-xl">
+                                <span class="bg-blue-100 text-blue-700 p-1.5 rounded-lg"><i class="fa-solid fa-pen-nib text-xs"></i></span>
+                                <span>Νεοελληνική Γλώσσα</span>
+                            </div>
+                            <div class="flex items-center gap-3 bg-blue-50/60 p-2.5 rounded-xl">
+                                <span class="bg-blue-100 text-blue-700 p-1.5 rounded-lg"><i class="fa-solid fa-microchip text-xs"></i></span>
+                                <span>Μαθήματα Τομέα & Ειδικότητας</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 pt-2">
+                    <span class="block text-center text-[11px] font-bold text-slate-400 bg-slate-50 py-2 rounded-xl">
+                        Στοχευμένη Επιτυχία στις Εξετάσεις
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Testimonials / Reviews -->
+    <section id="reviews" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <h2 class="text-4xl md:text-5xl font-black text-slate-800">Τι λένε για εμάς</h2>
+            <p class="text-slate-500 mt-5 text-lg font-medium">Εμπειρίες μαθητών και γονέων που μας εμπιστεύθηκαν το μέλλον τους!</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-lg border-2 border-slate-100 relative mt-6">
+                <div class="absolute -top-8 left-8 w-16 h-16 bg-blue-900 text-white text-2xl flex items-center justify-center rounded-2xl shadow-lg transform rotate-6">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="flex text-amber-400 text-lg mb-6 mt-4 gap-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 font-medium mb-8 leading-relaxed text-lg">
+                    "Οι καθηγητές στα Μαθηματικά και τη Φυσική ήταν δίπλα μου σε κάθε βήμα. Κατάφερα να γράψω 19.2 και να περάσω στο Πολυτεχνείο!"
+                </p>
+                <div class="flex items-center gap-4 border-t-2 border-slate-100 pt-6">
+                    <div class="w-12 h-12 bg-slate-100 text-blue-900 font-black rounded-xl flex items-center justify-center text-sm">
+                        ΜΚ
+                    </div>
+                    <div>
+                        <p class="font-black text-slate-800">Μάριος Κ.</p>
+                        <p class="text-sm text-orange-500 font-bold">Φοιτητής ΗΜΜΥ</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Review 2 -->
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-lg border-2 border-slate-100 relative mt-6">
+                <div class="absolute -top-8 left-8 w-16 h-16 bg-orange-500 text-white text-2xl flex items-center justify-center rounded-2xl shadow-lg transform -rotate-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="flex text-amber-400 text-lg mb-6 mt-4 gap-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 font-medium mb-8 leading-relaxed text-lg">
+                    "Άψογη οργάνωση. Η κόρη μου στο ΕΠΑΛ βρήκε ακριβώς τη βοήθεια που χρειαζόταν στα μαθήματα ειδικότητας Πληροφορικής."
+                </p>
+                <div class="flex items-center gap-4 border-t-2 border-slate-100 pt-6">
+                    <div class="w-12 h-12 bg-slate-100 text-blue-900 font-black rounded-xl flex items-center justify-center text-sm">
+                        ΓΠ
+                    </div>
+                    <div>
+                        <p class="font-black text-slate-800">Γιώργος Π.</p>
+                        <p class="text-sm text-orange-500 font-bold">Γονέας</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-lg border-2 border-slate-100 relative mt-6">
+                <div class="absolute -top-8 left-8 w-16 h-16 bg-blue-900 text-white text-2xl flex items-center justify-center rounded-2xl shadow-lg transform rotate-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="flex text-amber-400 text-lg mb-6 mt-4 gap-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 font-medium mb-8 leading-relaxed text-lg">
+                    "Η μεθοδολογία στην Έκθεση και τα Αρχαία με βοήθησε να ξεκλειδώσω τον τρόπο σκέψης μου. Το περιβάλλον είναι απλά φανταστικό!"
+                </p>
+                <div class="flex items-center gap-4 border-t-2 border-slate-100 pt-6">
+                    <div class="w-12 h-12 bg-slate-100 text-blue-900 font-black rounded-xl flex items-center justify-center text-sm">
+                        ΔΑ
+                    </div>
+                    <div>
+                        <p class="font-black text-slate-800">Δήμητρα Α.</p>
+                        <p class="text-sm text-orange-500 font-bold">Φοιτήτρια Νομικής</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-lg border-2 border-slate-100 relative mt-6">
+                <div class="absolute -top-8 left-8 w-16 h-16 bg-orange-500 text-white text-2xl flex items-center justify-center rounded-2xl shadow-lg transform rotate-6">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="flex text-amber-400 text-lg mb-6 mt-4 gap-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 font-medium mb-8 leading-relaxed text-lg">
+                    "Τα ολιγομελή τμήματα κάνουν τεράστια διαφορά. Ο καθηγητής είχε χρόνο να μου λύσει κάθε απορία στα Μαθηματικά Προσανατολισμού."
+                </p>
+                <div class="flex items-center gap-4 border-t-2 border-slate-100 pt-6">
+                    <div class="w-12 h-12 bg-slate-100 text-blue-900 font-black rounded-xl flex items-center justify-center text-sm">
+                        ΝΣ
+                    </div>
+                    <div>
+                        <p class="font-black text-slate-800">Νίκος Σ.</p>
+                        <p class="text-sm text-orange-500 font-bold">Φοιτητής Οικονομικών</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-lg border-2 border-slate-100 relative mt-6">
+                <div class="absolute -top-8 left-8 w-16 h-16 bg-blue-900 text-white text-2xl flex items-center justify-center rounded-2xl shadow-lg transform -rotate-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="flex text-amber-400 text-lg mb-6 mt-4 gap-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 font-medium mb-8 leading-relaxed text-lg">
+                    "Ως γονέας εκτίμησα ιδιαίτερα τη συνεχή ενημέρωση για την πρόοδο του γιου μου. Επαγγελματισμός και ανθρώπινη προσέγγιση!"
+                </p>
+                <div class="flex items-center gap-4 border-t-2 border-slate-100 pt-6">
+                    <div class="w-12 h-12 bg-slate-100 text-blue-900 font-black rounded-xl flex items-center justify-center text-sm">
+                        ΕΜ
+                    </div>
+                    <div>
+                        <p class="font-black text-slate-800">Ελένη Μ.</p>
+                        <p class="text-sm text-orange-500 font-bold">Γονέας</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 6 -->
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-lg border-2 border-slate-100 relative mt-6">
+                <div class="absolute -top-8 left-8 w-16 h-16 bg-orange-500 text-white text-2xl flex items-center justify-center rounded-2xl shadow-lg transform rotate-3">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
+                <div class="flex text-amber-400 text-lg mb-6 mt-4 gap-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 font-medium mb-8 leading-relaxed text-lg">
+                    "Τα διαγωνίσματα προσομοίωσης με βοήθησαν να διώξω το άγχος των εξετάσεων. Σας ευχαριστώ για όλα!"
+                </p>
+                <div class="flex items-center gap-4 border-t-2 border-slate-100 pt-6">
+                    <div class="w-12 h-12 bg-slate-100 text-blue-900 font-black rounded-xl flex items-center justify-center text-sm">
+                        ΧΠ
+                    </div>
+                    <div>
+                        <p class="font-black text-slate-800">Χριστίνα Π.</p>
+                        <p class="text-sm text-orange-500 font-bold">Φοιτήτρια Ιατρικής</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location -->
+    <section id="contact" class="bg-blue-950 text-white py-24 relative overflow-hidden rounded-t-[4rem]">
+        <div class="absolute top-0 right-0 w-[30rem] h-[30rem] bg-orange-600/10 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-blue-600/20 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <!-- Info & Map Side -->
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">Ελάτε να γνωριστούμε!</h2>
+                    <p class="text-slate-300 mb-8 text-lg font-medium leading-relaxed">
+                        Είμαστε εδώ για να συζητήσουμε τις ανάγκες του κάθε μαθητή και να σχεδιάσουμε μαζί το πιο αποδοτικό πρόγραμμα σπουδών.
+                    </p>
+
+                    <div class="space-y-6 mb-10">
+                        <!-- Address -->
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 bg-slate-800 group-hover:bg-orange-500 rounded-2xl flex items-center justify-center text-orange-400 group-hover:text-white transition-colors shadow-lg text-2xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-lg text-white">Διεύθυνση</h4>
+                                <p class="text-slate-400 mt-1 font-medium">Μιχαήλ Μωραΐτη 43, Ελληνορώσων</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 bg-slate-800 group-hover:bg-orange-500 rounded-2xl flex items-center justify-center text-orange-400 group-hover:text-white transition-colors shadow-lg text-2xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-lg text-white">Τηλέφωνο</h4>
+                                <a href="tel:6944899007" class="text-slate-400 hover:text-orange-400 mt-1 font-medium block transition-colors">6944 899 007</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 bg-slate-800 group-hover:bg-orange-500 rounded-2xl flex items-center justify-center text-orange-400 group-hover:text-white transition-colors shadow-lg text-2xl shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-lg text-white">Email</h4>
+                                <a href="mailto:ekmathisi.education@gmail.com" class="text-slate-400 hover:text-orange-400 mt-1 font-medium block transition-colors">ekmathisi.education@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Map Embed -->
+                    <div class="rounded-3xl overflow-hidden border-4 border-slate-800 shadow-2xl h-64 w-full relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d786.0573045070158!2d23.773534604054564!3d37.9951136240279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1980fc3b9dd0b%3A0x805b288291f3bab6!2zzpzOuc-HzrHOrs67IM6cz4nPgc6xzpDPhM63IDQzLCDOkc64zq7Ovc6xIDExNSAyNQ!5e0!3m2!1sel!2sgr!4v1787092376947!5m2!1sel!2sgr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form Side -->
+                <div class="bg-white text-slate-800 p-8 sm:p-12 rounded-[2.5rem] shadow-2xl border-4 border-slate-100">
+                    <h3 class="text-3xl font-black mb-2 text-blue-900">Φόρμα Επικοινωνίας</h3>
+                    <p class="text-slate-500 mb-8 font-medium">Συμπληρώστε τα στοιχεία σας και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατόν.</p>
+
+                    <form action="https://formspree.io/f/mqpzwzqe" method="POST" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Ονοματεπώνυμο</label>
+                            <input type="text" name="name" required placeholder="π.χ. Μαρία Παπαδοπούλου" class="w-full px-5 py-4 rounded-2xl bg-slate-50 border-2 border-slate-200 focus:border-orange-500 focus:outline-none transition-colors font-medium">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Τηλέφωνο Επικοινωνίας</label>
+                            <input type="tel" name="phone" required placeholder="π.χ. 6912345678" class="w-full px-5 py-4 rounded-2xl bg-slate-50 border-2 border-slate-200 focus:border-orange-500 focus:outline-none transition-colors font-medium">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Ενδιαφέρον για</label>
+                            <select name="level" class="w-full px-5 py-4 rounded-2xl bg-slate-50 border-2 border-slate-200 focus:border-orange-500 focus:outline-none transition-colors font-medium text-slate-600">
+                                <option value="Γυμνάσιο">Γυμνάσιο</option>
+                                <option value="ΓΕ.Λ.">ΓΕ.Λ.</option>
+                                <option value="ΕΠΑ.Λ.">ΕΠΑ.Λ.</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Μήνυμα / Απορία</label>
+                            <textarea name="message" rows="4" placeholder="Γράψτε μας πώς μπορούμε να σας βοηθήσουμε..." class="w-full px-5 py-4 rounded-2xl bg-slate-50 border-2 border-slate-200 focus:border-orange-500 focus:outline-none transition-colors font-medium"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-black py-4 rounded-2xl transition-all shadow-lg hover:shadow-xl text-lg">
+                            Αποστολή Μηνύματος
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-sm font-medium">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 ΕΚΜΑΘΗΣΗ - Φροντιστήριο Μέσης Εκπαίδευσης. Όλα τα δικαιώματα διατηρούνται.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
